@@ -10,7 +10,7 @@ const config = require('../config');
 
 function createToken (user) {
 	const payload = {
-		sub: user._id,
+		sub: user.id,
 		iat: moment().unix(), // Registro al momento en que se creó el token
 		exp: moment().add(14, 'days').unix() // Expira a los 14 días
 	};
